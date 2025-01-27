@@ -1,9 +1,9 @@
 {
   "private": true,
   "scripts": {
-    "prepare": "nitropack prepare",
-    "dev": "nitropack dev",
-    "build": "nitropack build && cp node_modules/pdfjs-dist/legacy/build/pdf.worker.mjs .output/server/node_modules/pdfjs-dist/legacy/build/",
+    "build": "nitro build",
+    "dev": "nitro dev",
+    "prepare": "nitro prepare",
     "preview": "node .output/server/index.mjs"
   },
   "devDependencies": {
@@ -22,7 +22,7 @@
     "mixpanel": "^0.18.0",
     "mongoose": "^8.9.5",
     "mongoose-paginate-v2": "^1.8.2",
-    "nitropack": "^2.10.4",
+    "nitropack": "latest",
     "nodemailer": "^6.9.12",
     "nodemailer-express-handlebars": "^6.1.2",
     "pdf-lib": "^1.17.1",
