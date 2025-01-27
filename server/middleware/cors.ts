@@ -5,10 +5,7 @@ export default eventHandler((event) => {
     console.error("Invalid event or response object");
     return;
   }
-  event.node.res.setHeader(
-    "Access-Control-Allow-Origin",
-    "http://localhost:3001"
-  );
+  event.node.res.setHeader("Access-Control-Allow-Origin", "*");
   event.node.res.setHeader(
     "Access-Control-Allow-Methods",
     "GET, POST, PUT, DELETE, OPTIONS"
