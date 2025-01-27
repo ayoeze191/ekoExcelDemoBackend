@@ -9,3 +9,4 @@ export default defineNitroConfig({
     tasks: true,
   },
 });
+console.log();
