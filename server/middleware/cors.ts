@@ -5,7 +5,12 @@ export default eventHandler((event) => {
     console.error("Invalid event or response object");
     return;
   }
-  event.node.res.setHeader("Access-Control-Allow-Origin", "*");
+
+  // Set CORS headers for all methods
+  event.node.res.setHeader(
+    "Access-Control-Allow-Origin",
+    "https://ekoexcel.netlify.app"
+  ); // Replace with your frontend domain
   event.node.res.setHeader(
     "Access-Control-Allow-Methods",
     "GET, POST, PUT, DELETE, OPTIONS"
@@ -20,5 +25,9 @@ export default eventHandler((event) => {
   if (event.node.req.method === "OPTIONS") {
     event.node.res.statusCode = 204; // No Content
     event.node.res.end();
+    return; // Early exit to prevent further handling
   }
+
+  // Handle other requests (GET, POST, etc.)
+  // Your regular handler logic goes here
 });
