@@ -4,9 +4,9 @@ export default defineNitroPlugin(async (nitroApp) => {
   console.log("Connecting to MongoDB...");
   try {
     const dbName = process.env.DB_NAME || "ekoexcel";
-    const uri =
-      process.env.MONGO_URI ||
-      `mongodb://localhost:27017/${dbName}?authSource=admin`;
+    const uri = `mongodb+srv://Ayoeze191:75739768jc@cluster0.ipkimb3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
+    // process.env.MONGO_URI ||
+    // `mongodb://localhost:27017/${dbName}?authSource=admin`;
 
     // Connect to MongoDB
     await mongoose.connect(uri, {
